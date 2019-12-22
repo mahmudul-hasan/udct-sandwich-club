@@ -8,6 +8,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import static com.udacity.sandwichclub.utils.GlobalConstants.EXTRA_POSITION;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -32,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void launchDetailActivity(int position) {
         Intent intent = new Intent(this, DetailActivity.class);
-        intent.putExtra(DetailActivity.EXTRA_POSITION, position);
+        intent.putExtra(EXTRA_POSITION, position);
         startActivity(intent);
     }
 }
